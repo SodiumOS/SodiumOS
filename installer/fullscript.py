@@ -4,7 +4,7 @@ disk = ""
 lock = True
 os.system("clear")
 while lock:
-    print("INSTALLATION CONFIG (1/4)")
+    print("INSTALLATION CONFIG (1/3)")
     print("Here, you must specify what disk you are actually installing the OS onto. This is a very important step as if you were to pick the incorrect option, you could cause damage to the system.")
     disk = input("Enter disk (/dev/XXX): ")
     if os.path.exists(disk):
@@ -19,7 +19,7 @@ lock = True
 swap = 4
 os.system("clear")
 while lock:
-    print("SWAPFILE CONFIGURATION (2/4)")
+    print("SWAPFILE CONFIGURATION (2/3)")
     print("To those unfamiliar, swap is virtual memory that the kernel can fall back on in cases where it is needed.")
     print("SodiumOS reccomends having at least 1 gigabyte of swap, just in case.")
     swap = input("Enter swap size (in gigs): ")
@@ -36,14 +36,18 @@ while lock:
 lock = True
 username = ""
 password = ""
+os.system("clear")
 while lock:
-    print("USER CONFIGURATION")
+    print("USER CONFIGURATION (3/3)")
     print("This will take you through the process of making your Administrator user (i.e. a user that can run sudo.)")
     username = input("Create username: ")
     password = input("Create password: ")
     confirm = input("Confirm password: ")
     if password == confirm:
         lock = False
+    else:
+        os.system("clear")
+        print("Passwords do not match")
 
 os.system("clear")
 os.system("./parting.sh " + disk)

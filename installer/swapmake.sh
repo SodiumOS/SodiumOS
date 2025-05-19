@@ -1,4 +1,4 @@
-echo "Sodium OS Installer Swapfile Generation Module [by Alexander Scott]"
+
 GIGS=$1
 echo "Creating $SWAP" "megabytes of swap" 
 echo "Generating swapfile (This will take some time)@"

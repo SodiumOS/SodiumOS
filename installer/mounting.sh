@@ -1,4 +1,4 @@
-echo "Sodium OS Installer First-Mounting Module [by Alexander Scott]"
+
 DISK=$1
 
 mount $(echo $DISK)2 /mnt
