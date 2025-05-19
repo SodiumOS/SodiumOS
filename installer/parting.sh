@@ -1,7 +1,5 @@
 echo "Sodium OS Installer Automatic Partitioning Module [by Alexander Scott]"
-
-echo "Enter the disk you want to partition (/dev/XXX)"
-read DISK
+DISK=$1
 echo "Are you SURE you want to partition this disk, remember, all data will be WIPED from this disk!!!!!! (Type 'Yes, I am sure!')"
 read CONFIRMATION
 
